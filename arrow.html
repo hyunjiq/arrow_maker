@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mycontant{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .mycontant i {
+            position: absolute;
+            right: 30px;
+            top: 5px;
+            width: 20px;
+            height: 13px;
+        }
+        .mycontant i:before {
+            display: none;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.2s, margin 0.2s;
+            display: block;
+            opacity: 0;
+            width: 20px;
+            height: 13px;
+            margin-right: 20px;
+            background: url(https://www.samyang.co.kr/resources/kr/global/images/main/main_sec01_bot_list_arrow_blue.svg) 50% 50% no-repeat;
+            background-size: 100% 100%;
+        }
+        .mycontant i:after {
+            display: none;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.2s, margin 0.2s;
+            display: block;
+            width: 20px;
+            height: 13px;
+            background: url(https://www.samyang.co.kr/resources/kr/global/images/main/main_sec01_bot_list_arrow.svg) 50% 50% no-repeat;
+            background-size: 100% 100%;
+        }
+        .mycontant:hover i:before {
+            -webkit-animation: arrowAnimationBefore 0.3s forwards 0.3s;
+            animation: arrowAnimationBefore 0.3s forwards 0.3s;
+        }
+        .mycontant:hover i:after {
+        -webkit-animation: arrowAnimationAfter 0.3s forwards;
+        animation: arrowAnimationAfter 0.3s forwards;
+        }
+
+        @keyframes arrowAnimationBefore {
+            from {
+            margin-right: 20px;
+            opacity: 0;
+            }
+            to {
+            margin-right: 0;
+            opacity: 1;
+            }
+        }
+        @keyframes arrowAnimationAfter {
+            from {
+            margin-right: 0;
+            opacity: 1;
+            }
+            to {
+            margin-right: -15px;
+            opacity: 0;
+            }
+        }
+        .mycontant2{
+            position: relative;
+            width: 100%;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .marqueereverse {
+            color: #da291c;
+            animation: slidereversemarquee 120s linear infinite;
+            position: absolute;
+            display: inline-block;
+            white-space: nowrap;
+            background: none;
+            font-family: 'Oswald';
+            font-size: 200px;
+            font-weight: 900;
+            line-height: 180px;
+        }
+        .marqueereverse.t1 {
+            animation-delay: -60s;
+        }
+        @keyframes slidereversemarquee {
+            0% {transform:translateX(100%);}
+            100% { transform:translateX(-100%);}
+        }
+    </style>
+</head>
+<body>
+    <div class="mycontant">
+        <i></i>
+    </div>    
+    <div class="mycontant2">
+        <div class="marqueereverse">
+            <span>초콜릿은 카카오 콩을 재료로 가공한 식품</span>
+            <span>숙성한 카카오 콩을 볶아서</span>
+            <span>분말로 만든 카카오 매스와</span>
+        </div>
+        <div class="marqueereverse t1">
+            <span>지방 성분만으로 만들어진 코코아 버터를 혼합</span>
+            <span>설탕 이외 다른 재료를 더 넣어 만든다.</span>
+            <span>맛있다</span>
+        </div>
+    </div>
+
+</body>
+</html>

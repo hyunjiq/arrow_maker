@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 span{
+            position: relative;
+        }
+        h1 > span:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background: rgba(255,255,0,0.5);
+            transition: .5s;
+            height: 100%;
+        }
+        h1:hover > span:before{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>강조에는 이 <span><span>효과</span></span>가 짱이지</h1>
+</body>
+</html>
