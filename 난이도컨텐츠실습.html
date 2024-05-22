@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul, li, dl, dt, dd{
+            list-style: none;
+        }
+        .checksvg::before{
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background: url(./img/check.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .d-flex{
+            display: flex;
+        }
+        .my-auto{
+            margin: auto 0;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt class="">나는dt다</dt>
+        <dd class="d-flex checksvg"><span class="my-auto">나는 dd들이다span을껴야된다</span></dd>
+        <dd class="d-flex checksvg"><span class="my-auto">나는 dd들이다span을껴야된다</span></dd>
+        <dd class="d-flex checksvg"><span class="my-auto">나는 dd들이다span을껴야된다</span></dd>
+        <dd class="d-flex checksvg"><span class="my-auto">나는 dd들이다span을껴야된다</span></dd>
+        <dd class="d-flex checksvg"><span class="my-auto">나는 dd들이다span을껴야된다</span></dd>
+    </dl>
+</body>
+</html>
